@@ -1,0 +1,7 @@
+server:gamefunc.o server.o
+	gcc -o server gamefunc.o server.o
+gamefunc.o:gamefunc.c gamefunc.h
+	gcc -c gamefunc.c
+server.o:server.c gamefunc.h
+	gcc -c server.c
+

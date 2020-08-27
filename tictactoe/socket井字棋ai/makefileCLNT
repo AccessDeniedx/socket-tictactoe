@@ -1,0 +1,6 @@
+client:gamefunc.o client.o
+	gcc -o client gamefunc.o client.o
+#gamefunc.o:gamefunc.c gamefunc.h
+#	gcc -c gamefunc.c
+client.o:client.c gamefunc.h
+	gcc -c client.c
